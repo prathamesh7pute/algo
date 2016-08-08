@@ -1,4 +1,6 @@
-
+/*
+*   binarySearch to find position of element in the array
+*/
 const binarySearch = (items, x, low, high) => {
 
     if (low > high) {
@@ -17,6 +19,4 @@ const binarySearch = (items, x, low, high) => {
 
 };
 
-const items = [0, 1, 2, 4, 6, 8, 9];
-const index = binarySearch(items, 6, 0, items.length);
-console.log(index);
+export default binarySearch;

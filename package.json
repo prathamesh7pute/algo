@@ -1,0 +1,22 @@
+{
+  "name": "algo",
+  "version": "1.0.0",
+  "description": "CS in JavaScript",
+  "main": "main.js",
+  "scripts": {
+    "test": "mocha test/**/*.js --compilers js:babel-register"
+  },
+  "keywords": [
+    "cs",
+    "algorithms",
+    "javascript"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "6.11.4",
+    "babel-preset-es2015": "6.13.2",
+    "babel-preset-stage-2": "6.13.0",
+    "mocha": "3.0.1"
+  }
+}
