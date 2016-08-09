@@ -1,7 +1,7 @@
 /*
 *   binarySearch to find position of element in the array
 */
-const binarySearch = (items, x, low, high) => {
+const binarySearchRecursive = (items, x, low, high) => {
 
     if (low > high) {
         return -1;
@@ -12,11 +12,32 @@ const binarySearch = (items, x, low, high) => {
     if (items[middle] === x) {
         return middle;
     } else if (items[middle] > x) {
-        return binarySearch(items, x, low, middle - 1);
+        return binarySearchRecursive(items, x, low, middle - 1);
     } else {
-        return binarySearch(items, x, middle + 1, high);
+        return binarySearchRecursive(items, x, middle + 1, high);
     }
 
 };
 
-export default binarySearch;
+const binarySearchIterative = (items, x) => {
+
+    let low = 0;
+    let high = items.length;
+
+    while (low <= high) {
+
+        const middle = Math.floor((low + high) / 2);
+
+        if (items[middle] === x) {
+            return middle;
+        } else if (items[middle] < x) {
+            low = middle + 1;
+        } else {
+            high = middle - 1;
+        }
+
+    }
+
+}
+
+export { binarySearchRecursive, binarySearchIterative };

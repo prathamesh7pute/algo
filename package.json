@@ -11,7 +11,7 @@
     "algorithms",
     "javascript"
   ],
-  "author": "",
+  "author": "Prathamesh Satpute",
   "license": "MIT",
   "devDependencies": {
     "babel-cli": "6.11.4",
